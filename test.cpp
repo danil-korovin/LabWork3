@@ -4,6 +4,7 @@
 #include "circ_list.h"
 #include <gtest/gtest.h>
 #include <numeric>
+#include <vector>
 
 
 TEST(ConstructorTest, DefaultConstructor)

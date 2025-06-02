@@ -9,6 +9,7 @@
 #include <memory>
 #include <iterator>
 #include <stdexcept>
+#include <vector>
 
 
 template <typename T> class circ_list
