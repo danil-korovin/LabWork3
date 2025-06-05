@@ -1,0 +1,165 @@
+The \mbox{\hyperlink{classcirc__list}{circ\+\_\+list}} is a list with bidirectional iterators, where the last element points back to the first element.\hypertarget{md_documentation_autotoc_md1}{}\doxysubsection{Constructors\+:}\label{md_documentation_autotoc_md1}
+
+\begin{DoxyEnumerate}
+\item Default Constructor\+: O(1) -\/ Initializes an empty list . 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{circ\_list()}
+
+\end{DoxyCode}
+
+\item Constructor with initializer list\+: O(n) -\/ Constructs the list from an std\+::initializer\+\_\+list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{circ\_list(std::initializer\_list<T> init\_list)}
+
+\end{DoxyCode}
+
+\item Copy constructor\+: O(n) -\/ Creates a copy of \mbox{\hyperlink{classcirc__list}{circ\+\_\+list}}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{circ\_list(const circ\_list\& other)}
+
+\end{DoxyCode}
+
+\item Move constructor\+: O(1) -\/ Transfers head, lsize to new list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{circ\_list(circ\_list\&\& other)}
+
+\end{DoxyCode}
+
+\item Destructor\+: O(n) -\/ Clears the list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\string~circ\_list()}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md_documentation_autotoc_md2}{}\doxysubsection{Assignment Operators\+:}\label{md_documentation_autotoc_md2}
+
+\begin{DoxyEnumerate}
+\item Copy Assignment\+: O(n) -\/ Cleare list and copying elements from other. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{operator=(const circ\_list\& other)}
+
+\end{DoxyCode}
+
+\item Move Assignment\+: O(1) -\/ Transferring the data from one list to another. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{operator=(circ\_list\&\& other)}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md_documentation_autotoc_md3}{}\doxysubsection{Iterators\+:}\label{md_documentation_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item $\ast$it Dereference operator\+: O(1) -\/ Returns a reference to the data.
+\item -\/$>$\+: O(1) -\/ Returns a pointer to the data element.
+\item begin()\+: O(1) -\/ Returns an iterator head.
+\item end()\+: O(1) -\/ Returns null.
+\item ++it Prefix Increment operators\+: O(1) -\/ Moves the iterator to the next element.
+\item it++ Postfix Increment operators\+: O(1) -\/ Moves the iterator to the next element.
+\item --it Prefix Decrement operators\+: O(1) -\/ Moves the iterator to the previous element.
+\item it-- Postfix Decrement operators\+: O(1) -\/ Moves the iterator to the previous element.
+\item == Equality \+: O(1) -\/ Compares two iterators.
+\item != Inequality\+: O(1) -\/ Compares two iterators.
+\end{DoxyEnumerate}\hypertarget{md_documentation_autotoc_md4}{}\doxysubsection{Basic functions\+:}\label{md_documentation_autotoc_md4}
+
+\begin{DoxyEnumerate}
+\item empty()\+: O(1) -\/ Checks if the list is empty.
+\item size()\+: O(1) -\/ Returns the number of elements.
+\item front()\+: O(1) -\/ Returns a reference to the first element.
+\item back()\+: O(1) -\/ Returns a reference to the last element.
+\end{DoxyEnumerate}\hypertarget{md_documentation_autotoc_md5}{}\doxysubsection{Modifiers\+:}\label{md_documentation_autotoc_md5}
+
+\begin{DoxyEnumerate}
+\item push\+\_\+back O(1) -\/ Adds an element to the end. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{push\_back(const T\& value):}
+
+\end{DoxyCode}
+
+\item push\+\_\+back O(1) -\/ Moves add an element to the end. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{push\_back(T\&\& value)}
+
+\end{DoxyCode}
+
+\item push\+\_\+front O(1) -\/ Adds an element to the beginning. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{push\_front(const T\& value) }
+
+\end{DoxyCode}
+
+\item push\+\_\+front O(1) -\/ Moves add an element to the beginning. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{push\_front(T\&\& value)}
+
+\end{DoxyCode}
+
+\item pop\+\_\+back O(1) -\/ Removes the last element from the list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pop\_back()}
+
+\end{DoxyCode}
+
+\item pop\+\_\+front O(1) -\/ Removes the first element from the list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pop\_front() }
+
+\end{DoxyCode}
+
+\item clear O(n) -\/ Removes all elements from the list. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{clear(): }
+
+\end{DoxyCode}
+
+\item erase O(1) -\/ Removes the element at the position of iterator. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{erase(iterator pos)}
+
+\end{DoxyCode}
+
+\item insert()\+: O(1) -\/ Inserts an element before the position of iterator. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{insert(iterator pos, const T\& value)}
+
+\end{DoxyCode}
+
+\item insert()\+: O(1) -\/ Move inserts an element before the position of iterator. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{insert(iterator pos, T\&\& value)}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md_documentation_autotoc_md6}{}\doxysubsection{Functions\+:}\label{md_documentation_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item find()\+: O(n) -\/ Searches for a value and returns an iterator. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{find(const T\& value)}
+
+\end{DoxyCode}
+
+\item copy()\+: O(n) -\/ Copies all elements. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy(const circ\_list\& other)}
+
+\end{DoxyCode}
+
+\item reverse\+\_\+copy()\+: O(n) -\/ Creates a reversed copy. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{reverse\_copy(const circ\_list\& other)}
+
+\end{DoxyCode}
+
+\item == \+: O(n) -\/ Check for equality. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{operator==(const circ\_list\& other)}
+
+\end{DoxyCode}
+
+\item != \+: O(n) -\/ Check for inequality. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{operator!=(const circ\_list\& other)}
+
+\end{DoxyCode}
+ 
+\end{DoxyEnumerate}
